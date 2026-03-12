@@ -1,0 +1,168 @@
+Scanner sc=new Scanner(System.in);
+//         // String sen="dell laptop is broken";
+//         // System.out.println(sen.length());
+//         // StringBuilder sb=new StringBuilder();
+//         // for(int i=0;i<sen.length();i++)
+//         // {
+//         //     if(i==0)
+//         //     {
+//         //         sb.append((char)(sen.charAt(i)-32));
+//         //     }
+//         //     if(sen.charAt(i)==" " && sen.charAt(i+1)!=" ")
+//         //     {
+//         //         sb.append((char)(sen.charAt(i)-32));
+//         //     }
+//         //     else
+//         //     {
+//         //         sb.append(sen.charAt(i));
+//         //     }
+//         // }
+//         // int count=0;
+//         // String sen1="dell laptop";
+//         // String arr[]=sen1.split("");
+//         // for(String ch:arr)
+//         // { 
+//         //      if(!ch.equals(" "))
+//         //      {
+//         //          count=count+1;
+//         //      } 
+//         //  }
+//         // System.out.println(count);
+//         // String sen="Dell laptop";
+//         // char ch[]=sen.toCharArray();
+//         // for(char c:ch)
+//         // {
+//         //     System.out.print(c+" ");
+//         // }
+//         // String sen="helloworld";
+//         // for(int i=sen.length()-1;i>=0;i--)
+//         // {
+//         //     System.out.print(sen.charAt(i)+" ");
+//         // } 
+//     //     String sen="Broken Laptop   given";
+//     //     String arr[]=sen.split(" ");
+//     //     String change=arr[arr.length-1];
+//     //     String rev="";
+//     //     for(int i=change.length()-1;i>=0;i--)
+//     //     {
+//     //         rev=rev+change.charAt(i);
+//     //     }
+//     //     for(int i=0;i<arr.length-2;i++)
+//     //     {
+//     //         System.out.print(arr[i]+" ");
+//     //     }
+//     //     System.out.print(rev);
+//     // Scanner sc=new Scanner(System.in);
+//     // String str=sc.nextLine();
+//     // String rev="";
+//     // for(int i=str.length()-1;i>=0;i--)
+//     // {
+//     //     rev=rev+str.charAt(i);
+//     // }
+//     // if(str.equals(rev))
+//     // {
+//     //     System.out.println("yes");
+//     // }
+//     // else
+//     // {
+//     //     System.out.println("no");
+//     // }/
+// //     String str = "Laptop";
+// // String sub = "Lap";
+
+// // for(int i = 0; i <= str.length() - sub.length(); i++)
+// // {
+// //     if(str.substring(i, i + sub.length()).equals(sub))
+// //     {
+// //         System.out.println ("Yes");
+// //         break;
+// //     }
+// // }
+// // 
+// // 
+// // Scanner sc=new Scanner(System.in);
+// // String s=sc.nextLine();
+// // StringBuilder sb=new StringBuilder(s);
+// // String v="aeiouAEIOU";
+// // for(int i=0;i<sb.length();i++)
+// // {
+// //     char ch=s.charAt(i);
+// //     if(v.indexOf(ch)==-1)
+// //     {
+// //         sb.deleteCharAt(ch);
+// //     }
+// // }
+// // System.out.println(sb.toString());
+// // Scanner sc=new Scanner(System.in);
+// // String first=sc.nextLine();
+// // String second=sc.nextLine();
+// // int i=sc.nextInt();
+// // StringBuilder sb=new StringBuilder(first);
+// // sb.insert(i,second);
+// // System.out.println(sb.toString());
+// // Scanner sc=new Scanner(System.in);
+// // String str=sc.nextLine();
+// // StringBuilder sb=new StringBuilder(str);
+// // StringBuilder rev=new StringBuilder();
+// // for(int i=str.length()-1;i>=0;i--)
+// // {
+// //     rev.append(str.charAt(i));
+// // }
+// // if(sb.equals("rev"))
+// // {
+// //     System.out.print("yes");
+// // }
+// // Scanner sc=new Scanner(System.in);
+// // String str=sc.nextLine();
+// //    String result="";
+// // for(int i=0;i<str.length();i++)
+// // {
+// //     char ch=str.charAt(i);
+// //     if(i%2==0)
+// //     {
+// //        result += Character.toUpperCase(ch);
+// //     }
+// //     else{
+// //         result += Character.toLowerCase(ch);
+// //     } 
+// // }
+// // System.out.println(result);
+// // Scanner sc=new Scanner(System.in);
+// // int n=sc.nextInt();
+// // sc.nextLine();
+// // StringBuilder sb=new StringBuilder();
+// // for(int i=0;i<n;i++)
+// // {
+// //     String str=sc.nextLine();
+// //     sb.append(str);
+// //     if(i<n-1)
+// //     {
+// //         sb.append(",");
+// //     }
+// // }
+// //     System.out.print(sb.toString());
+
+
+
+leetcode
+
+
+import java.util.Arrays;
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+
+        if (s.length() != t.length())
+            return false;
+
+        char[] a = s.toCharArray();
+        char[] b = t.toCharArray();
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        return Arrays.equals(a, b);
+    }
+}
+
+
