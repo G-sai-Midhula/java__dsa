@@ -1,0 +1,143 @@
+class Student {
+
+    Student() {   // Constructor name same as class name
+        System.out.println("Constructor called");
+    }
+
+    public static void main(String args[]) {
+        Student s = new Student();  // object creation
+    }
+}
+
+
+//PARAMETERIZED 
+class Student {
+
+    Student() {   // Constructor name same as class name
+        System.out.println("Constructor called");
+    }
+
+    public static void main(String args[]) {
+        Student s = new Student();  // object creation
+    }
+}
+
+//COPYING CONSTRUCTOR
+
+class Student {
+
+    int id;
+    String name;
+
+    // Parameterized constructor
+    Student(int i, String n) {
+        id = i;
+        name = n;
+    }
+
+    // Copy constructor
+    Student(Student s) {
+        id = s.id;
+        name = s.name;
+    }
+
+    void display() {
+        System.out.println(id + " " + name);
+    }
+
+    public static void main(String args[]) {
+
+        Student s1 = new Student(101, "Mahi"); // original object
+        Student s2 = new Student(s1);          // copy object
+
+        s1.display();
+        s2.display();
+    }
+}
+
+
+//CHAINING CONSTRUCTOR
+
+class Student {
+
+    int id;
+    String name;
+
+    Student() {
+        this(101); // calling another constructor
+        System.out.println("Default Constructor");
+    }
+
+    Student(int id) {
+        this(id, "Mahi"); // calling another constructor
+        System.out.println("One Parameter Constructor");
+    }
+
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+        System.out.println("Two Parameter Constructor");
+    }
+
+    public static void main(String args[]) {
+        Student s = new Student();
+    }
+}
+
+   //COPYING
+class Laptop {
+
+    String brand;
+    int price;
+
+    // Parameterized Constructor
+    Laptop(String b, int p) {
+        brand = b;
+        price = p;
+    }
+
+    // Copy Constructor
+    Laptop(Laptop l) {
+        brand = l.brand;
+        price = l.price;
+    }
+
+    void display() {
+        System.out.println("Brand: " + brand + " Price: " + price);
+    }
+
+    public static void main(String args[]) {
+
+        Laptop l1 = new Laptop("Dell", 60000); // original object
+        Laptop l2 = new Laptop(l1);            // copied object
+
+        l1.display();
+        l2.display();
+    }
+}
+    //CHAINING CONSTRUCTOR
+class Laptop {
+
+    String brand;
+    int price;
+
+    Laptop() {
+        this("HP", 50000);
+        System.out.println("Default Constructor");
+    }
+
+    Laptop(String brand) {
+        this(brand, 55000);
+        System.out.println("One Parameter Constructor");
+    }
+
+    Laptop(String brand, int price) {
+        this.brand = brand;
+        this.price = price;
+        System.out.println("Two Parameter Constructor");
+    }
+
+    public static void main(String args[]) {
+        Laptop l = new Laptop();
+    }
+}
