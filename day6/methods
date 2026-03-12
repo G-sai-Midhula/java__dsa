@@ -1,0 +1,70 @@
+class Test1 {
+    void display() {
+        System.out.println("Hello Java");
+    }
+
+    public static void main(String args[]) {
+        Test1 t = new Test1();
+        t.display();
+    }
+}
+
+Method Without Parameters and Without Return Type
+
+class Laptop {
+
+    void show() {
+        System.out.println("This is a laptop");
+    }
+
+    public static void main(String args[]) {
+        Laptop l = new Laptop();
+        l.show();
+    }
+}
+
+
+Method With Parameters and Without Return Type
+
+class Laptop {
+
+    void display(String brand, int price) {
+        System.out.println("Brand: " + brand);
+        System.out.println("Price: " + price);
+    }
+
+    public static void main(String args[]) {
+        Laptop l = new Laptop();
+        l.display("Dell", 60000);
+    }
+}
+
+Method Without Parameters but With Return Type
+
+class Laptop {
+
+    int getPrice() {
+        return 50000;
+    }
+
+    public static void main(String args[]) {
+        Laptop l = new Laptop();
+        int price = l.getPrice();
+        System.out.println("Price: " + price);
+    }
+}
+
+Method With Parameters and Return Type
+
+class Laptop {
+
+    int addPrice(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String args[]) {
+        Laptop l = new Laptop();
+        int result = l.addPrice(20000, 30000);
+        System.out.println("Total Price: " + result);
+    }
+}
